@@ -81,6 +81,7 @@ int main() {
     printf("Densidade populacional: %.2f habitantes/km²\n", densidade);
     printf("Pontos turísticos: %d\n", pontosTuristicos);
 
+    // Quebra de linha para melhor visualização
     printf("\n");
 
     printf("\nDados da segunda carta:\n");
@@ -95,25 +96,18 @@ int main() {
     printf("Pontos turísticos: %d\n", pontosTuristicos2);
     printf("\n");
 
-    // Comparando as cartas
-    resultadoComparacaoDensidade = densidade < densidade2;
-    resultadoComparacaoArea = area > area2;
-    resultadoComparacaoPibPerCapita = pibPerCapita > pibPerCapita2;
-    resultadoComparacaoPontosTuristicos = pontosTuristicos > pontosTuristicos2;
-    resultadoComparacaoPopulacao = populacao > populacao2;
-    resultadoComparacaoPib = pib > pib2;
-    resultadoComparacaoSuperPoder = superPoder > superPoder2;
 
 
     // Exibindo os resultados das comparações
-    printf("A carta %s tem maior densidade populacional que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoDensidade);
-    printf("A carta %s tem maior área que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoArea);
-    printf("A carta %s tem maior PIB per capita que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoPibPerCapita);
-    printf("A carta %s tem mais pontos turísticos que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoPontosTuristicos);
-    printf("A carta %s tem maior população que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoPopulacao);
-    printf("A carta %s tem maior PIB que a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoPib);
-    printf("A carta %s é mais poderosa em relação a carta %s? %d\n", codigoCarta, codigoCarta2, resultadoComparacaoSuperPoder);
+    printf("Comparação de densidade entre as cartas:\n");
+    printf("Densidade populacional carta 1(%s): %.2f\n" , cidade, densidade);
+    printf("Densidade populacional carta 2(%s): %.2f\n" , cidade2, densidade2);
+    if (densidade < densidade2) {
+        printf("Carta 1(%s) vence na densidade populacional\n" , cidade);
+    } else{
+        printf("Carta 2(%s) vence na densidade populacional\n" , cidade2);
+    }
 
 
     return 0;
-} 
+}
